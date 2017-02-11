@@ -184,7 +184,6 @@ def Undo(event):
 
 def Enter(event):
     check = KeyPress(event);
-    print check;
 
     if(check == "break"):
         return "break";
