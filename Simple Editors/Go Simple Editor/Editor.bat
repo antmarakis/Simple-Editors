@@ -1,0 +1,1 @@
+python "C:\Program Files\Go Simple Editor\Editor.pyw" %1 %0
