@@ -184,6 +184,7 @@ def Undo(event):
 
 def Enter(event):
     check = KeyPress(event);
+    print check;
 
     if(check == "break"):
         return "break";
@@ -279,6 +280,8 @@ def KeyPress(event):
     global listBox;
     global textPad;
 
+    print selecting;
+
     k = event.keycode; #The keycode of pressed button (integer)
 
     if(selecting):
@@ -370,7 +373,12 @@ def AutoComplete(event):
     
     k = event.keycode; #The keycode of pressed button (integer)
     c = event.char; #The char of pressed button (character)
-    if(c == '!' or c == '*' or c == '&' or c == '^' or c == '%' or c == '$' or c == '#' or c == '-' or c == '@' or c == '(' or c == ')' or k==46 or k==107 or k==144 or k==111 or k==106 or k==109 or k==187 or k==192 or k==190 or k==188 or k==222 or k==186 or k==220 or k==219 or k==221 or k==17 or k==18 or k==40 or k==39 or k==38 or k==37 or k==13 or k==32 or k==9):
+    if(c == '!' or c == '*' or c == '&'or c == '^' or c == '%'
+       or c == '$' or c == '#' or c == '-' or c == '@' or c == '('
+       or c == ')' or k==46 or k==107 or k==144 or k==111 or k==106
+       or k==109 or k==187 or k==192 or k==190 or k==188 or k==222
+       or k==186 or k==220 or k==219 or k==221 or k==17 or k==18
+       or k==40 or k==39 or k==38 or k==37 or k==13 or k==32 or k==9):
         #key pressed isn't a char, reset word and hide listBox
         word = "";
         listBox.place(x=0,y=0,width=0,height=0);
