@@ -380,6 +380,7 @@ def AutoComplete(event):
 
     if(suggestions == None):
         #If there are no suggestions, hide listBox
+        selecting = False;
         listBox.place(x=0,y=0,width=0,height=0);
         return;
 
