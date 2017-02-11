@@ -11,7 +11,7 @@ For Windows-
 
 2. Download Python 2.7.x and add it to PATH
 
-3. Download a C++ compiler (and C#) and add it to PATH
+3. Download a C++ compiler (and C# and Go) and add it to PATH
 
 4. Download pygments (pip install pygments)
 
