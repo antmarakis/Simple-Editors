@@ -260,15 +260,18 @@ def KeyRelease(event):
         if(k != 8 and k != 46 and k != 16 and k != 222 and c != '/'):
             #Key pressed isn't an acceptable variable name character and it is
             #neither 'Backspace' nor 'Delete' nor 'Shift'.
-            if(word not in variables and not word.replace('-','').isdigit()):
-                #The end of the word was reached and it isn't in variables
-                #and it is not a number.
-                trie.Insert(word); #Insert word to trie
-                variables.append(word); #Add word to list of variables
+            AddVariable();
         else:
             Highlight();
     else:
         Highlight(); #Highlight the current row
+
+def AddVariable():
+    if(word not in variables and not word.replace('-','').isdigit()):
+        #The end of the word was reached and it isn't in variables
+            #and it is not a number.
+            trie.Insert(word); #Insert word to trie
+            variables.append(word); #Add word to list of variables
 
 def KeyPress(event):
     global selecting;
@@ -373,6 +376,10 @@ def AutoComplete(event):
        or k==186 or k==220 or k==219 or k==221 or k==17 or k==18
        or k==40 or k==39 or k==38 or k==37 or k==13 or k==32 or k==9):
         #key pressed isn't a char, reset word and hide listBox
+        if(c not in varChars):
+            if(k != 8 and k != 46 and k != 16 and k != 222 and c != '/'):
+                AddVariable();
+        
         word = "";
         listBox.place(x=0,y=0,width=0,height=0);
         selecting = False; #User can't select a suggestion
