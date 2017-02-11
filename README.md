@@ -22,3 +22,5 @@ For Windows-
 Optional: You can associate C++ files (and others) with the editor if you like so you can open them when double clicking. You can do it via the terminal. First type "assoc .cpp=cppFile" (you can do this with other extensions too, like .h, and for C# files, .cs, or Go files, .go) and then type "ftype cppFile=PATH_TO_EDITOR.BAT %1 %0" (note: you might need to wrap the path in quotation marks)
 
 Note for C#: If you have .NET installed, you already have the compiler. Search for a "cs.exe".
+
+Note for File Icons: You can set the default icons for files opened by the editors using some third-party software like FileTypesMan.
