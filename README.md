@@ -1,5 +1,5 @@
 ## Simple Editors
-Two simple editors to write and run C++ and C# programs.
+Three simple editors to write and run C++, C# and Go programs.
 
 Features: Syntax Highlighting, Code Completion
 
